@@ -43,7 +43,6 @@ function initRangeEl() {
 
   const style = document.createElement("style");
   const head = document.head || document.getElementsByTagName("head")[0];
-  style.type = "text/css";
   head.appendChild(style);
   /**
    * IE/Older Edge FIX

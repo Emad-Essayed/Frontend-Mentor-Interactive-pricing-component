@@ -1,0 +1,268 @@
+/* MAIN Start */
+.wrapper {
+  position: relative;
+}
+
+.signup-intro {
+  width: 100%;
+  height: 74vh;
+  background: url("../images/pattern-circles.svg") no-repeat center 21.7%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  h1 {
+    font-size: 2rem;
+    padding: 8.7rem 0 1rem;
+    color: $dark-Desaturated-Blue;
+  }
+
+  p {
+    width: 54%;
+    font-size: 1.3rem;
+    margin: auto;
+    line-height: 1.7;
+  }
+}
+
+.signup-box {
+  width: 88%;
+  position: absolute;
+  top: 59%;
+  left: 6%;
+  background-color: $white;
+  border-radius: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.65rem;
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.1),
+    -2px -2px 4px 0px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    margin-top: 3.1rem;
+    letter-spacing: 1px;
+  }
+}
+
+.signup-price {
+  font-size: 1.3rem;
+  margin-top: 1.3rem;
+
+  .price-value {
+    font-size: 2.7rem;
+    font-weight: 700;
+    color: $dark-Desaturated-Blue;
+  }
+
+  :last-child {
+    position: relative;
+    top: -0.5rem;
+    left: 0.4rem;
+  }
+}
+
+.signup-billing {
+  width: 100%;
+  max-width: 31.5rem;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0.8rem 1rem 4.5rem;
+
+  > * {
+    display: inline-block;
+    padding-top: 0.49rem;
+    font-size: 1.1rem;
+  }
+
+  .monthly {
+    position: relative;
+    top: -1px;
+    width: 4.2rem;
+    height: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input {
+      appearance: none;
+
+      &:checked + label {
+        justify-content: flex-end;
+        background-color: $soft-Cyan;
+      }
+    }
+
+    label {
+      position: relative;
+      top: 0.3rem;
+      left: 0;
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      background-color: $light-Grayish-Blue2;
+      padding: 0.4rem;
+      border-radius: 3.5rem;
+      @extend %trans-300;
+      cursor: pointer;
+
+      &::before {
+        content: "";
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 1.3rem;
+        height: 1.3rem;
+        border-radius: 50%;
+        background-color: $white;
+        display: inline-block;
+      }
+    }
+  }
+
+  .yearly-billing {
+    padding: 0.3rem 0.6rem;
+    background-color: $light-Grayish-Red;
+    color: $light-Red;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 2rem;
+    margin-top: 0.4rem;
+
+    .discount-text {
+      display: none;
+    }
+  }
+}
+
+.signup-info {
+  padding: 2.5rem 0;
+  border-top: 1px solid $light-Grayish-Blue2;
+  width: 100%;
+  text-align: center;
+
+  ul {
+    text-align: center;
+
+    li {
+      font-size: 1.2rem;
+      padding-bottom: 1.2rem;
+      position: relative;
+
+      &::before {
+        content: url("../images/icon-check.svg");
+        position: relative;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        margin-right: 1.5rem;
+      }
+    }
+  }
+
+  button {
+    margin-top: 1.8rem;
+    width: 16.5rem;
+    height: 4rem;
+    border-radius: 2rem;
+    color: $pale-Blue;
+    background-color: $dark-Desaturated-Blue;
+    cursor: pointer;
+    @extend %trans-200;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .signup-intro {
+    h1 {
+      font-size: 2.8rem;
+      padding-top: 10.5rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
+
+  .signup-box {
+    width: 38%;
+    top: 50%;
+    left: 31%;
+    gap: 3.5rem;
+
+    h2 {
+      align-self: flex-start;
+      font-size: 1.6rem;
+      padding: 2.5rem 4.5rem 0.5rem;
+    }
+  }
+
+  .signup-price {
+    position: absolute;
+    top: 2.4rem;
+    right: 5.2rem;
+    font-size: 1.6rem;
+
+    & :last-child {
+      top: -0.9rem;
+    }
+
+    .price-value {
+      font-size: 4rem;
+    }
+  }
+
+  .signup-billing {
+    width: 84%;
+    max-width: 38.5rem;
+    margin-left: 6rem;
+    margin-top: 1.5rem;
+
+    & > * {
+      padding-top: 0;
+      font-size: 1.2rem;
+    }
+
+    .yearly-billing {
+      font-weight: 800;
+      margin-top: 0;
+
+      .discount-text {
+        display: inline-block;
+      }
+    }
+  }
+
+  .signup-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 4.5rem;
+
+    ul {
+      text-align: left;
+    }
+
+    button {
+      margin-top: 0;
+    }
+  }
+}
+
+/* MAIN End */

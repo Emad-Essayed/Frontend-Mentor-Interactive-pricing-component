@@ -1,0 +1,104 @@
+/* Global Styling */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::selection {
+  background: none;
+}
+
+h1 {
+  color: $black;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+%trans-200 {
+  transition: all 0.2s ease-in-out;
+}
+
+%trans-300 {
+  transition: all 0.3s ease-in-out;
+}
+
+%trans-500 {
+  transition: all 0.5s ease-in-out;
+}
+
+html {
+  font-family: $font-family-default;
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: $grayish-Blue;
+  background-color: $very-Pale-Blue;
+  padding-bottom: 35rem;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media screen and (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: -1.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+.attribution {
+  padding: 2rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 79%, 34%);
+}

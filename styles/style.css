@@ -1,0 +1,504 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+/* Global Styling */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::-moz-selection {
+  background: none;
+}
+
+*::selection {
+  background: none;
+}
+
+h1 {
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.signup-info button {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.signup-billing .monthly label {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+html {
+  font-family: "Manrope", sans-serif;
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #858fad;
+  background-color: #fafbff;
+  padding-bottom: 35rem;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media screen and (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: -1.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+.attribution {
+  padding: 2rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: #122e9b;
+}
+
+/* MAIN Start */
+.wrapper {
+  position: relative;
+}
+
+.signup-intro {
+  width: 100%;
+  height: 74vh;
+  background: url("../images/pattern-circles.svg") no-repeat center 21.7%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.signup-intro img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.signup-intro h1 {
+  font-size: 2rem;
+  padding: 8.7rem 0 1rem;
+  color: #293356;
+}
+
+.signup-intro p {
+  width: 54%;
+  font-size: 1.3rem;
+  margin: auto;
+  line-height: 1.7;
+}
+
+.signup-box {
+  width: 88%;
+  position: absolute;
+  top: 59%;
+  left: 6%;
+  background-color: white;
+  border-radius: 0.7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2.65rem;
+  -webkit-box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.1), -2px -2px 4px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.1), -2px -2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.signup-box h2 {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  margin-top: 3.1rem;
+  letter-spacing: 1px;
+}
+
+.signup-price {
+  font-size: 1.3rem;
+  margin-top: 1.3rem;
+}
+
+.signup-price .price-value {
+  font-size: 2.7rem;
+  font-weight: 700;
+  color: #293356;
+}
+
+.signup-price :last-child {
+  position: relative;
+  top: -0.5rem;
+  left: 0.4rem;
+}
+
+.signup-billing {
+  width: 100%;
+  max-width: 31.5rem;
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5rem 0.8rem 1rem 4.5rem;
+}
+
+.signup-billing > * {
+  display: inline-block;
+  padding-top: 0.49rem;
+  font-size: 1.1rem;
+}
+
+.signup-billing .monthly {
+  position: relative;
+  top: -1px;
+  width: 4.2rem;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signup-billing .monthly input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.signup-billing .monthly input:checked + label {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background-color: #a5f3eb;
+}
+
+.signup-billing .monthly label {
+  position: relative;
+  top: 0.3rem;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  background-color: #cdd7ee;
+  padding: 0.4rem;
+  border-radius: 3.5rem;
+  cursor: pointer;
+}
+
+.signup-billing .monthly label::before {
+  content: "";
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  background-color: white;
+  display: inline-block;
+}
+
+.signup-billing .yearly-billing {
+  padding: 0.3rem 0.6rem;
+  background-color: #feece7;
+  color: #ff8c66;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 2rem;
+  margin-top: 0.4rem;
+}
+
+.signup-billing .yearly-billing .discount-text {
+  display: none;
+}
+
+.signup-info {
+  padding: 2.5rem 0;
+  border-top: 1px solid #cdd7ee;
+  width: 100%;
+  text-align: center;
+}
+
+.signup-info ul {
+  text-align: center;
+}
+
+.signup-info ul li {
+  font-size: 1.2rem;
+  padding-bottom: 1.2rem;
+  position: relative;
+}
+
+.signup-info ul li::before {
+  content: url("../images/icon-check.svg");
+  position: relative;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  margin-right: 1.5rem;
+}
+
+.signup-info button {
+  margin-top: 1.8rem;
+  width: 16.5rem;
+  height: 4rem;
+  border-radius: 2rem;
+  color: #bdccff;
+  background-color: #293356;
+  cursor: pointer;
+}
+
+.signup-info button:hover {
+  color: white;
+}
+
+@media (min-width: 1200px) {
+  .signup-intro h1 {
+    font-size: 2.8rem;
+    padding-top: 10.5rem;
+  }
+  .signup-intro p {
+    font-size: 1.5rem;
+  }
+  .signup-box {
+    width: 38%;
+    top: 50%;
+    left: 31%;
+    gap: 3.5rem;
+  }
+  .signup-box h2 {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    font-size: 1.6rem;
+    padding: 2.5rem 4.5rem 0.5rem;
+  }
+  .signup-price {
+    position: absolute;
+    top: 2.4rem;
+    right: 5.2rem;
+    font-size: 1.6rem;
+  }
+  .signup-price :last-child {
+    top: -0.9rem;
+  }
+  .signup-price .price-value {
+    font-size: 4rem;
+  }
+  .signup-billing {
+    width: 84%;
+    max-width: 38.5rem;
+    margin-left: 6rem;
+    margin-top: 1.5rem;
+  }
+  .signup-billing > * {
+    padding-top: 0;
+    font-size: 1.2rem;
+  }
+  .signup-billing .yearly-billing {
+    font-weight: 800;
+    margin-top: 0;
+  }
+  .signup-billing .yearly-billing .discount-text {
+    display: inline-block;
+  }
+  .signup-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 2.5rem 4.5rem;
+  }
+  .signup-info ul {
+    text-align: left;
+  }
+  .signup-info button {
+    margin-top: 0;
+  }
+}
+
+/* MAIN End */
+/* RANGE SLIDER Start */
+.slider-range {
+  width: 86%;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  height: 0.8rem;
+  padding: 0;
+  border-radius: 1rem;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="range"]:hover {
+  opacity: 0.7;
+}
+
+/*Chrome thumb*/
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-border-radius: 50%;
+  /*16x16px adjusted to be same as 14x14px on moz*/
+  width: 3.8rem;
+  height: 3.8rem;
+  border-radius: 50%;
+  background: url("../images/icon-slider.svg") no-repeat center;
+  background-color: #10d5c2;
+  -webkit-box-shadow: 0px 13px 18px 5px #a5f3eb;
+          box-shadow: 0px 13px 18px 5px #a5f3eb;
+}
+
+input[type="range"].draged::-webkit-slider-thumb {
+  background-color: #09776c;
+}
+
+/*Mozilla thumb*/
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -moz-border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: url("../images/icon-slider.svg") no-repeat center;
+  background-color: #10d5c2;
+  border: none;
+}
+
+input[type="range"].draged::-moz-range-thumb {
+  background-color: #09776c;
+}
+
+/*IE & Edge input*/
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: 6px;
+  /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+  background: transparent;
+  /*leave room for the larger thumb to overflow with a transparent border */
+  border-color: transparent;
+  border-width: 2px 0;
+  /*remove default tick marks*/
+  color: transparent;
+}
+
+/*IE & Edge thumb*/
+input[type="range"]::-ms-thumb {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: url("../images/icon-slider.svg") no-repeat center;
+  background-color: #10d5c2;
+}
+
+/*IE & Edge left side*/
+input[type="range"]::-ms-fill-lower {
+  background: #a5f3eb;
+  border-radius: 2px;
+}
+
+/*IE & Edge right side*/
+input[type="range"]::-ms-fill-upper {
+  background: #eaeefb;
+  border-radius: 2px;
+}
+
+/*IE disable tooltip*/
+input[type="range"]::-ms-tooltip {
+  display: none;
+}
+
+input[type="text"] {
+  border: none;
+}
+
+@media (min-width: 1200px) {
+  .slider-range {
+    width: 81%;
+  }
+}
+
+/* RANGE SLIDER End */
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,114 @@
+/* RANGE SLIDER Start */
+.slider-range {
+  width: 86%;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  height: 0.8rem;
+  padding: 0;
+  border-radius: 1rem;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+/*Chrome thumb*/
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-border-radius: 50%;
+  /*16x16px adjusted to be same as 14x14px on moz*/
+  width: 3.8rem;
+  height: 3.8rem;
+  border-radius: 50%;
+  background: url("../images/icon-slider.svg") no-repeat center;
+  background-color: $strong-Cyan;
+  box-shadow: 0px 13px 18px 5px $soft-Cyan;
+}
+
+input[type="range"].draged::-webkit-slider-thumb {
+  background-color: darken($strong-Cyan, 20%);
+}
+
+/*Mozilla thumb*/
+
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -moz-border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: url("../images/icon-slider.svg") no-repeat center;
+  background-color: $strong-Cyan;
+  border: none;
+}
+
+input[type="range"].draged::-moz-range-thumb {
+  background-color: darken($strong-Cyan, 20%);
+}
+
+/*IE & Edge input*/
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: 6px;
+  /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+  background: transparent;
+  /*leave room for the larger thumb to overflow with a transparent border */
+  border-color: transparent;
+  border-width: 2px 0;
+  /*remove default tick marks*/
+  color: transparent;
+}
+
+/*IE & Edge thumb*/
+
+input[type="range"]::-ms-thumb {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: url("../images/icon-slider.svg") no-repeat center;
+  background-color: $strong-Cyan;
+}
+
+/*IE & Edge left side*/
+
+input[type="range"]::-ms-fill-lower {
+  background: $soft-Cyan;
+  border-radius: 2px;
+}
+
+/*IE & Edge right side*/
+
+input[type="range"]::-ms-fill-upper {
+  background: $light-Grayish-Blue;
+  border-radius: 2px;
+}
+
+/*IE disable tooltip*/
+
+input[type="range"]::-ms-tooltip {
+  display: none;
+}
+
+input[type="text"] {
+  border: none;
+}
+
+@media (min-width: 1200px) {
+  .slider-range {
+    width: 81%;
+  }
+}
+
+/* RANGE SLIDER End */
